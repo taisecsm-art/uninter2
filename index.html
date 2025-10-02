@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projeto Igreja - Pedido de Ajuda</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f9f9f9, #e2f2ea);
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
-      text-align: center;
+      color: #243b2b;
+      background: linear-gradient(180deg, #f9fdfb, #e6f5ec);
     }
     header {
-      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') 
-                  no-repeat center center;
+      background-image: url('https://images.unsplash.com/photo-1509099836639-18baebf2a0e3?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
-      padding: 60px 20px;
+      background-position: center;
+      padding: 70px 20px;
       color: white;
+      text-align: center;
     }
     header h1 {
-      margin: 0;
       font-size: 36px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin: 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.45);
     }
     header p {
-      margin: 10px 0 0;
-      font-size: 18px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      margin: 8px 0 0;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.35);
     }
     main {
-      padding: 20px;
+      padding: 28px 16px;
+      text-align: center;
     }
-    main h2 {
-      font-size: 24px;
+    .subtitle {
       color: #2f6d52;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+    .note {
+      color: #56685f;
+      margin-bottom: 18px;
+    }
+    .form-wrap {
+      display: flex;
+      justify-content: center;
     }
     iframe {
-      border: none;
       width: 100%;
-      max-width: 700px;
-      height: 900px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      max-width: 720px;
+      height: 1200px;
+      border-radius: 10px;
+      border: 0;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.12);
     }
     footer {
-      background-color: #2f6d52;
-      color: white;
-      padding: 15px;
-      margin-top: 30px;
+      background: #2f6d52;
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      margin-top: 26px;
+    }
+    @media(max-width:600px){
+      header{padding:44px 12px}
+      iframe{height:1300px}
     }
   </style>
 </head>
@@ -60,17 +73,20 @@
   </header>
 
   <main>
-    <h2>Faça seu pedido de ajuda</h2>
-    <p>Preencha o formulário abaixo e nossa equipe entrará em contato com você.</p>
+    <div class="subtitle">Faça seu pedido de ajuda</div>
+    <div class="note">Preencha o formulário abaixo. Nossa equipe entrará em contato com você.</div>
 
-    <!-- Seu formulário do Google Forms -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8EEiQPo4-jgpJfSEZB6JNNlOGlo1qko-ajY6fJZKAOwFTbw/viewform?embedded=true" width="640" height="1198" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-      Carregando…
-    </iframe>
+    <div class="form-wrap">
+      <!-- Seu formulário do Google Forms -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8EEiQPo4-jgpJfSEZB6JNNlOGlo1qko-ajY6fJZKAOwFTbw/viewform?embedded=true" 
+              frameborder="0" marginheight="0" marginwidth="0">
+        Carregando…
+      </iframe>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Projeto Igreja - Servindo com amor</p>
+    &copy; 2025 Projeto Igreja — Servindo com amor
   </footer>
 </body>
 </html>

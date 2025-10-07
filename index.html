@@ -5,48 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comunidade Unida</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #d8e3d5; /* verde envelhecido claro */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    header img {
-      max-width: 200px;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #2e4d2c; /* verde mais escuro para contraste */
-      margin: 0;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 700px;
-      height: 1200px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background-color: #d8e3d5; /* Verde envelhecido claro */
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="https://images.pexels.com/photos/4863855/pexels-photo-4863855.jpeg?_gl=1*x43tfk*_ga*MzI1NTY3NDYyLjE3MzgwMjY5NzQ.*_ga_8JE65Q40S6*czE3NTk3OTg4OTIkbzM1JGcxJHQxNzU5Nzk5MzM1JGozMCRsMCRoMA.." alt="Imagem título acolhedora">
-    <h1>Comunidade Unida</h1>
-  </header>
-  
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8EEiQPo4-jgpJfSEZB6JNNlOGlo1qko-ajY6fJZKAOwFTbw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="bg-white shadow-2xl rounded-2xl p-10 max-w-lg w-full">
+    
+    <!-- Imagem do título -->
+    <img src="https://images.pexels.com/photos/4863855/pexels-photo-4863855.jpeg?_gl=1*x43tfk*_ga*MzI1NTY3NDYyLjE3MzgwMjY5NzQ.*_ga_8JE65Q40S6*czE3NTk3OTg4OTIkbzM1JGcxJHQxNzU5Nzk5MzM1JGozMCRsMCRoMA.." 
+         alt="Comunidade Unida" 
+         class="mx-auto rounded-2xl shadow-lg mb-6">
+
+    <!-- Headline -->
+    <h1 class="text-3xl font-bold text-center mb-6 text-green-900">Comunidade Unida</h1>
+
+    <!-- Formulário -->
+    <form class="space-y-4">
+      <div>
+        <label for="nome" class="block text-sm font-medium text-gray-700">Nome</label>
+        <input id="nome" name="nome" type="text" 
+               class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+        <input id="email" name="email" type="email" 
+               class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500">
+      </div>
+      <button type="submit" 
+              class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">
+        Enviar
+      </button>
+    </form>
+  </div>
 </body>
 </html>
-

@@ -1,179 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comunidade Unida</title>
-
-  <!-- Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#d8e3d5;       /* verde envelhecido claro */
-      --text:#173a26;
-      --accent:#2f6d52;
-      --card-bg: rgba(255,255,255,0.92);
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #d8e3d5; /* verde envelhecido claro */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Montserrat',system-ui,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    header {
+      text-align: center;
+      padding: 20px;
     }
-
-    /* HERO / BANNER full width */
-    .hero{
-      width:100%;
-      height:42vh;           /* ajuste a altura aqui (ex: 42vh, 50vh, 300px) */
-      min-height:260px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      background-image: url('https://images.pexels.com/photos/4863855/pexels-photo-4863855.jpeg');
-      background-size: cover;
-      background-position: center;
+    header img {
+      max-width: 200px;
+      border-radius: 12px;
+      margin-bottom: 10px;
     }
-    /* Overlay para contraste do texto */
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.12));
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #2e4d2c; /* verde mais escuro para contraste */
+      margin: 0;
     }
-    .hero .hero-content{
-      position:relative;
-      z-index:2;
-      text-align:center;
-      color:#fff;
-      padding:0 16px;
-    }
-    .hero h1{
-      margin:0;
-      font-size:clamp(28px,5vw,48px);
-      font-weight:700;
-      letter-spacing:0.4px;
-      text-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-    .hero p{
-      margin:10px 0 0;
-      font-size:clamp(14px,2vw,18px);
-      text-shadow:0 4px 12px rgba(0,0,0,0.25);
-    }
-
-    /* Main area with iframe */
-    main{
-      display:flex;
-      justify-content:center;
-      padding:34px 16px;
-    }
-    .card{
-      width:100%;
-      max-width:960px;
-      background:var(--card-bg);
-      border-radius:14px;
-      padding:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .info{
-      text-align:center;
-      margin-bottom:12px;
-      color:var(--accent);
-      font-weight:600;
-    }
-
-    iframe{
-      width:100%;
-      height:1100px; /* ajuste se quiser maior/menor */
-      border:0;
-      border-radius:8px;
-      display:block;
-      background:transparent;
-    }
-
-    .fallback{
-      margin-top:14px;
-      text-align:center;
-    }
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      padding:10px 16px;
-      border-radius:8px;
-      font-weight:700;
-      box-shadow:0 6px 18px rgba(47,109,82,0.16);
-    }
-    .btn.ghost{
-      background:transparent;
-      color:var(--accent);
-      border:1px solid rgba(47,109,82,0.14);
-      margin-left:10px;
-      font-weight:600;
-    }
-
-    footer{
-      text-align:center;
-      padding:22px 12px;
-      color:#fff;
-      background:var(--accent);
-      margin-top:28px;
-    }
-
-    /* Responsivo */
-    @media (max-width:640px){
-      .hero{height:48vh}
-      iframe{height:1400px}
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 1200px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-
-  <!-- HERO / Banner: troque a imagem diretamente aqui se quiser outra -->
-  <header class="hero" role="banner" aria-label="Banner Comunidade Unida">
-    <div class="hero-content">
-      <h1>Comunidade Unida</h1>
-      <p>Acolhimento e ajuda prática para quem precisa</p>
-    </div>
+  <header>
+    <img src="https://images.pexels.com/photos/4863855/pexels-photo-4863855.jpeg?_gl=1*x43tfk*_ga*MzI1NTY3NDYyLjE3MzgwMjY5NzQ.*_ga_8JE65Q40S6*czE3NTk3OTg4OTIkbzM1JGcxJHQxNzU5Nzk5MzM1JGozMCRsMCRoMA.." alt="Imagem título acolhedora">
+    <h1>Comunidade Unida</h1>
   </header>
-
-  <main>
-    <div class="card" role="main" aria-labelledby="formTitle">
-      <div id="formTitle" class="info">Faça seu pedido — nossa equipe entrará em contato</div>
-
-      <!-- === Iframe do Google Forms (já com o seu src) === -->
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSd8EEiQPo4-jgpJfSEZB6JNNlOGlo1qko-ajY6fJZKAOwFTbw/viewform?embedded=true"
-        title="Formulário de pedido - Comunidade Unida"
-        aria-label="Formulário de pedido - Comunidade Unida"
-      >
-        Carregando…
-      </iframe>
-
-      <!-- fallback caso o iframe não carregue -->
-      <div class="fallback">
-        <a class="btn" href="https://forms.gle/aezbGRj75AAshz6LA" target="_blank" rel="noopener">Abrir formulário (se não carregar)</a>
-        <a class="btn ghost" href="#" onclick="alert('Para trocar a imagem do topo: edite a propriedade CSS background-image em .hero no arquivo index.html.'); return false;">Como trocar a imagem?</a>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    &copy; <span id="ano"></span> Comunidade Unida — Servindo com amor
-  </footer>
-
-  <script>
-    // ajusta o ano automático
-    document.getElementById('ano').textContent = new Date().getFullYear();
-  </script>
+  
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8EEiQPo4-jgpJfSEZB6JNNlOGlo1qko-ajY6fJZKAOwFTbw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 </body>
 </html>
-
 
